@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project DefaultTargets="Build" TreatAsLocalProperty="OutDir"
+         xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <Target Name="ClearGameFolderCopyLocal" AfterTargets="ResolveAssemblyReferences">
+        <ItemGroup>
+            <ReferenceCopyLocalPaths Remove="$(GameFolder)\*"/>
+        </ItemGroup>
+    </Target>
+
+    <Target Name="ILRepack" AfterTargets="Build">
+        <ItemGroup>
+            <InputAssemblies Include="$(TargetDir)\*.dll"
+                             Exclude="**\0Harmony.dll"/>
+        </ItemGroup>
+
+        <ILRepack
+                TargetPlatformVersion="v2"
+                TargetKind="SameAsPrimaryAssembly"
+                LibraryPath="$(GameFolder)"
+                Wildcards="true"
+                InputAssemblies="@(InputAssemblies)"
+                OutputFile="$(OutputPath)\$(AssemblyName).dll"
+        />
+
+    </Target>
+
+    <Target Name="CopyArtifactsToInstallFolder" AfterTargets="ILRepack" Condition=" '$(AssemblyName)' != 'Commons' ">
+        <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+            <InstallFolder>..\Release\$(ProjectName)</InstallFolder>
+        </PropertyGroup>
+        <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+            <InstallFolder>$(ModFolder)\$(ProjectName)</InstallFolder>
+        </PropertyGroup>
+
+        <PropertyGroup>
+            <TempPublishFolder>$(ProjectDir)\publish</TempPublishFolder>
+            <UseArchivedVersions Condition="'$(UseArchivedVersions)' == ''">false</UseArchivedVersions>
+            <UseArchivedVersions Condition="'$(UseArchivedVersions)' != 'true'">false</UseArchivedVersions>
+            <SupportedContent Condition="'$(SupportedContent)' == ''">vanilla_id</SupportedContent>
+            <LastWorkingBuild Condition="'$(LastWorkingBuild)' == ''">466654</LastWorkingBuild>
+            <APIVersion Condition="'$(APIVersion)' == ''">0</APIVersion>
+        </PropertyGroup>
+
+        <ItemGroup>
+            <!-- 
+            <AnimFiles Include="$(ProjectDir)\anim\**\*.*" />
+            <WorldGenFiles Include="$(ProjectDir)\worldgen\**\*.*" />
+            <YamlFiles Include="$(ProjectDir)\*.yaml" />
+            -->
+            <YamlFiles Include="$(ProjectDir)\*.yaml"/>
+            <PoFiles Include="$(ProjectDir)\**\*.po"/>
+        </ItemGroup>
+
+        <!--
+        <Copy SourceFiles="@(PoFiles)" DestinationFiles="@(PoFiles->'$(TempPublishFolder)\strings\%(RecursiveDir)%(Filename)%(Extension)')"/>
+        -->
+        <Copy SourceFiles="@(YamlFiles)" DestinationFiles="@(YamlFiles->'$(TempPublishFolder)\%(Filename)%(Extension)')"/>
+        <Copy SourceFiles="@(PoFiles)" DestinationFiles="@(PoFiles->'$(TempPublishFolder)\strings\%(Filename)%(Extension)')"/>
+
+        <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(TempPublishFolder)\$(TargetFileName)"/>
+
+        <ModInfo InputFilePath="$(TempPublishFolder)"
+                 OutputFilePath="$(InstallFolder)"
+                 UseArchivedVersions="$(UseArchivedVersions)"
+                 SupportedContent="$(SupportedContent)"
+                 LastWorkingBuild="$(LastWorkingBuild)"
+                 APIVersion="$(APIVersion)"
+        />
+
+        <RemoveDir Directories="$(TempPublishFolder)"/>
+
+        <ItemGroup>
+            <DirtyFiles Include="$(InstallFolder)\**\.DS_Store"/>
+        </ItemGroup>
+
+        <Delete Files="@(DirtyFiles)"/>
+
+    </Target>
+
+</Project>
