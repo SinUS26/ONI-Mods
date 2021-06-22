@@ -13,6 +13,7 @@ namespace BottleEmptierVar
             public static void OnLoad()
             {
                 //				LogInit();
+//                Localization.RegisterForTranslation(typeof(Languages));
             }
         }
 

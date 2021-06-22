@@ -365,3 +365,4 @@ FodyWeavers.xsd
 #My lib
 lib/
 /BottleEmptierVar/--mod_info.yaml--
+!**/[Pp]ackages/ONI-ModInfo

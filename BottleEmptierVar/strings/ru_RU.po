@@ -1,4 +1,4 @@
-msgid ""
+﻿msgid ""
 msgstr ""
 "Application: Oxygen Not IncludedPOT Version: 2.0\n"
 "Project-Id-Version: \n"
@@ -13,7 +13,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Language: ru_RU\n"
 
-#. undancer.SelectLastCarePackage.Languages.REROLL
-msgctxt "undancer.SelectLastCarePackage.Languages.REROLL"
-msgid "REROLL"
-msgstr "????"
+#. STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIER.NAME
+msgctxt "STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIER.NAME"
+msgid "<link=\"BOTTLEEMPTIER\">Bottle Emptier</link>"
+msgstr "<link=\"BOTTLEEMPTIER\">Опустошитель бутылок</link>"
+
+        
+#. BottleEmptierVar.BottleEmptierVar.DisplayName
+msgctxt "BottleEmptierVar.BottleEmptierVar.DisplayName"
+msgid "<link=\"BOTTLEEMPTIER\">Bottle Emptier Variable Size</link>"
+msgstr "<link=\"BOTTLEEMPTIER\">Опустошитель бутылок изменяемого объема</link>"
+
+#. BottleEmptierVar.BottleEmptierVar.Id 

@@ -8,7 +8,7 @@ namespace BottleEmptierVar
 {
     public class BottleEmptierVar : IBuildingConfig
     {
-        public const string Id = "BottleEmptierVar";
+        public static LocString Id = "BottleEmptierVar";
         public static LocString DisplayName = "Bottle Emptier Variable Size";
         public static LocString Description = STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIER.DESC;
         public static LocString Effect = STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIER.EFFECT;

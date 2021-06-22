@@ -12,7 +12,7 @@
     <Target Name="ILRepack" AfterTargets="Build">
         <ItemGroup>
 	    <InputAssemblies Include="$(TargetDir)\$(ProjectName).dll"/>
-	    <InputAssemblies Include="..\packages\YamlDotNet.11.2.0\lib\net45\YamlDotNet.dll"/>
+<!--	    <InputAssemblies Include="..\packages\YamlDotNet.11.2.0\lib\net45\YamlDotNet.dll"/> -->
 <!--	    <InputAssemblies Include="$(TargetDir)\*.dll"
                              Exclude="**\0Harmony.dll"/> -->
 <!--            <InputAssemblies Include="$(LibFolder)\*.dll"
@@ -56,13 +56,13 @@
         </PropertyGroup>
         <PropertyGroup Condition="'$(Configuration)' == 'VanillaDebug'">
 <!--            <InstallFolder>$(ModFolder)\$(ProjectName)\archived_versions\vanilla</InstallFolder>  -->
-            <InstallFolder>$(ModFolder)\$(ProjectName)</InstallFolder> 
+            <InstallFolder>$(UserProfile)\Documents\Klei\OxygenNotIncluded\mods\dev\$(ProjectName)</InstallFolder> 
 	    <UseArchivedVersions>true</UseArchivedVersions>
             <SupportedContent>VANILLA_ID</SupportedContent>
             <LastWorkingBuild>466650</LastWorkingBuild>
         </PropertyGroup>                                               
         <PropertyGroup Condition="'$(Configuration)' == 'SpacedOutDebug'">
-            <InstallFolder>$(ModFolder)\$(ProjectName)</InstallFolder> 
+            <InstallFolder>$(UserProfile)\Documents\Klei\OxygenNotIncluded\mods\dev\$(ProjectName)</InstallFolder> 
 	    <UseArchivedVersions>false</UseArchivedVersions>
             <SupportedContent>EXPANSION1_ID</SupportedContent>
             <LastWorkingBuild>466654</LastWorkingBuild>
@@ -96,7 +96,8 @@
         <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(TempPublishFolder)\$(TargetFileName)"/>
 
 
-	<Exec Command="echo InputFilePath=$(TempPublishFolder) OutputFilePath=$(InstallFolder) UseArchivedVersions=$(UseArchivedVersions) SupportedContent=$(SupportedContent) LastWorkingBuild=$(LastWorkingBuild) APIVersion=$(APIVersion)" />
+<!--	<Exec Command="echo InputFilePath=$(TempPublishFolder) OutputFilePath=$(InstallFolder) UseArchivedVersions=$(UseArchivedVersions) SupportedContent=$(SupportedContent) LastWorkingBuild=$(LastWorkingBuild) APIVersion=$(APIVersion)" /> -->
+
 
         <ModInfo InputFilePath="$(TempPublishFolder)"
                  OutputFilePath="$(InstallFolder)"
@@ -105,8 +106,8 @@
                  LastWorkingBuild="$(LastWorkingBuild)"
                  APIVersion="$(APIVersion)"
         />
-	<Exec Command="echo Ok" />
-<!--        <RemoveDir Directories="$(TempPublishFolder)"/> -->
+<!--	<Exec Command="echo Ok" /> -->
+        <RemoveDir Directories="$(TempPublishFolder)"/>  
 
         <ItemGroup>
             <DirtyFiles Include="$(InstallFolder)\**\.DS_Store"/>
