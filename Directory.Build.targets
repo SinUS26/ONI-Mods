@@ -11,14 +11,21 @@
 
     <Target Name="ILRepack" AfterTargets="Build">
         <ItemGroup>
-            <InputAssemblies Include="$(TargetDir)\*.dll"
-                             Exclude="**\0Harmony.dll"/>
+	    <InputAssemblies Include="$(TargetDir)\$(ProjectName).dll"/>
+	    <InputAssemblies Include="..\packages\YamlDotNet.11.2.0\lib\net45\YamlDotNet.dll"/>
+<!--	    <InputAssemblies Include="$(TargetDir)\*.dll"
+                             Exclude="**\0Harmony.dll"/> -->
+<!--            <InputAssemblies Include="$(LibFolder)\*.dll"
+                             Exclude="**\0Harmony.dll"/> -->
         </ItemGroup>
 
+<!--                LibraryPath="$(GameFolder)"  -->
+<!--	<Exec Command="echo LibFolder = $(LibFolder)" />
+	<Exec Command="echo InputAssembles = @(InputAssemblies)" /> -->
         <ILRepack
-                TargetPlatformVersion="v2"
+                TargetPlatformVersion="v4"
                 TargetKind="SameAsPrimaryAssembly"
-                LibraryPath="$(GameFolder)"
+		LibraryPath="$(LibFolder)"
                 Wildcards="true"
                 InputAssemblies="@(InputAssemblies)"
                 OutputFile="$(OutputPath)\$(AssemblyName).dll"
@@ -27,10 +34,10 @@
     </Target>
 
     <Target Name="CopyArtifactsToInstallFolder" AfterTargets="ILRepack" Condition=" '$(AssemblyName)' != 'Commons' ">
-        <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PropertyGroup Condition="'$(Configuration)' == 'VanillaRelease' Or '$(Configuration)' == 'SpacedOutRelease'">
             <InstallFolder>..\Release\$(ProjectName)</InstallFolder>
         </PropertyGroup>
-        <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PropertyGroup Condition="'$(Configuration)' == 'VanillaDebug' Or '$(Configuration)' == 'SpacedOutDebug'">
             <InstallFolder>$(ModFolder)\$(ProjectName)</InstallFolder>
         </PropertyGroup>
 
@@ -38,8 +45,8 @@
             <TempPublishFolder>$(ProjectDir)\publish</TempPublishFolder>
             <UseArchivedVersions Condition="'$(UseArchivedVersions)' == ''">false</UseArchivedVersions>
             <UseArchivedVersions Condition="'$(UseArchivedVersions)' != 'true'">false</UseArchivedVersions>
-            <SupportedContent Condition="'$(SupportedContent)' == ''">VANILLA_ID</SupportedContent>
-            <LastWorkingBuild Condition="'$(LastWorkingBuild)' == ''">466292</LastWorkingBuild>
+            <SupportedContent Condition="'$(SupportedContent)' == ''">vanilla_id</SupportedContent>
+            <LastWorkingBuild Condition="'$(LastWorkingBuild)' == ''">466654</LastWorkingBuild>
             <APIVersion Condition="'$(APIVersion)' == ''">0</APIVersion>
         </PropertyGroup>
 

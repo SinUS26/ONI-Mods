@@ -7,16 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BottleEmptierVar", "BottleE
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		SpacedOutDebug|Any CPU = SpacedOutDebug|Any CPU
+		SpacedOutRelease|Any CPU = SpacedOutRelease|Any CPU
 		VanillaDebug|Any CPU = VanillaDebug|Any CPU
 		VanillaRelease|Any CPU = VanillaRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.SpacedOutDebug|Any CPU.ActiveCfg = SpacedOutDebug|Any CPU
+		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.SpacedOutDebug|Any CPU.Build.0 = SpacedOutDebug|Any CPU
+		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.SpacedOutRelease|Any CPU.ActiveCfg = SpacedOutRelease|Any CPU
+		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.SpacedOutRelease|Any CPU.Build.0 = SpacedOutRelease|Any CPU
 		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.VanillaDebug|Any CPU.ActiveCfg = VanillaDebug|Any CPU
 		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.VanillaDebug|Any CPU.Build.0 = VanillaDebug|Any CPU
 		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.VanillaRelease|Any CPU.ActiveCfg = VanillaRelease|Any CPU
