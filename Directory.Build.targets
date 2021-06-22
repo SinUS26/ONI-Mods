@@ -34,20 +34,47 @@
     </Target>
 
     <Target Name="CopyArtifactsToInstallFolder" AfterTargets="ILRepack" Condition=" '$(AssemblyName)' != 'Commons' ">
-        <PropertyGroup Condition="'$(Configuration)' == 'VanillaRelease' Or '$(Configuration)' == 'SpacedOutRelease'">
+<!--        <PropertyGroup Condition="'$(Configuration)' == 'VanillaRelease' Or '$(Configuration)' == 'SpacedOutRelease'">
             <InstallFolder>..\Release\$(ProjectName)</InstallFolder>
         </PropertyGroup>
         <PropertyGroup Condition="'$(Configuration)' == 'VanillaDebug' Or '$(Configuration)' == 'SpacedOutDebug'">
-            <InstallFolder>$(ModFolder)\$(ProjectName)</InstallFolder>
+            <InstallFolder>$(ModFolder)\$(ProjectName)</InstallFolder> 
+        </PropertyGroup>                                               -->
+        <PropertyGroup Condition="'$(Configuration)' == 'VanillaRelease'">
+<!--            <InstallFolder>..\Release\$(ProjectName)\archived_versions\vanilla</InstallFolder> -->
+            <InstallFolder>..\Release\$(ProjectName)</InstallFolder>
+	    <UseArchivedVersions>true</UseArchivedVersions>
+            <SupportedContent>VANILLA_ID</SupportedContent>
+            <LastWorkingBuild>466650</LastWorkingBuild>
+            <APIVersion>0</APIVersion> 
         </PropertyGroup>
+        <PropertyGroup Condition="'$(Configuration)' == 'SpacedOutRelease'">
+            <InstallFolder>..\Release\$(ProjectName)</InstallFolder>
+	    <UseArchivedVersions>false</UseArchivedVersions>
+            <SupportedContent>EXPANSION1_ID</SupportedContent>
+            <LastWorkingBuild>466654</LastWorkingBuild>
+        </PropertyGroup>
+        <PropertyGroup Condition="'$(Configuration)' == 'VanillaDebug'">
+<!--            <InstallFolder>$(ModFolder)\$(ProjectName)\archived_versions\vanilla</InstallFolder>  -->
+            <InstallFolder>$(ModFolder)\$(ProjectName)</InstallFolder> 
+	    <UseArchivedVersions>true</UseArchivedVersions>
+            <SupportedContent>VANILLA_ID</SupportedContent>
+            <LastWorkingBuild>466650</LastWorkingBuild>
+        </PropertyGroup>                                               
+        <PropertyGroup Condition="'$(Configuration)' == 'SpacedOutDebug'">
+            <InstallFolder>$(ModFolder)\$(ProjectName)</InstallFolder> 
+	    <UseArchivedVersions>false</UseArchivedVersions>
+            <SupportedContent>EXPANSION1_ID</SupportedContent>
+            <LastWorkingBuild>466654</LastWorkingBuild>
+        </PropertyGroup>                                               
 
         <PropertyGroup>
             <TempPublishFolder>$(ProjectDir)\publish</TempPublishFolder>
-            <UseArchivedVersions Condition="'$(UseArchivedVersions)' == ''">false</UseArchivedVersions>
+<!--            <UseArchivedVersions Condition="'$(UseArchivedVersions)' == ''">false</UseArchivedVersions>
             <UseArchivedVersions Condition="'$(UseArchivedVersions)' != 'true'">false</UseArchivedVersions>
             <SupportedContent Condition="'$(SupportedContent)' == ''">vanilla_id</SupportedContent>
             <LastWorkingBuild Condition="'$(LastWorkingBuild)' == ''">466654</LastWorkingBuild>
-            <APIVersion Condition="'$(APIVersion)' == ''">0</APIVersion>
+            <APIVersion Condition="'$(APIVersion)' == ''">0</APIVersion> -->
         </PropertyGroup>
 
         <ItemGroup>
@@ -68,6 +95,9 @@
 
         <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(TempPublishFolder)\$(TargetFileName)"/>
 
+
+	<Exec Command="echo InputFilePath=$(TempPublishFolder) OutputFilePath=$(InstallFolder) UseArchivedVersions=$(UseArchivedVersions) SupportedContent=$(SupportedContent) LastWorkingBuild=$(LastWorkingBuild) APIVersion=$(APIVersion)" />
+
         <ModInfo InputFilePath="$(TempPublishFolder)"
                  OutputFilePath="$(InstallFolder)"
                  UseArchivedVersions="$(UseArchivedVersions)"
@@ -75,8 +105,8 @@
                  LastWorkingBuild="$(LastWorkingBuild)"
                  APIVersion="$(APIVersion)"
         />
-
-        <RemoveDir Directories="$(TempPublishFolder)"/>
+	<Exec Command="echo Ok" />
+<!--        <RemoveDir Directories="$(TempPublishFolder)"/> -->
 
         <ItemGroup>
             <DirtyFiles Include="$(InstallFolder)\**\.DS_Store"/>
