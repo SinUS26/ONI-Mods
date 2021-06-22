@@ -38,8 +38,8 @@
             <TempPublishFolder>$(ProjectDir)\publish</TempPublishFolder>
             <UseArchivedVersions Condition="'$(UseArchivedVersions)' == ''">false</UseArchivedVersions>
             <UseArchivedVersions Condition="'$(UseArchivedVersions)' != 'true'">false</UseArchivedVersions>
-            <SupportedContent Condition="'$(SupportedContent)' == ''">vanilla_id</SupportedContent>
-            <LastWorkingBuild Condition="'$(LastWorkingBuild)' == ''">466654</LastWorkingBuild>
+            <SupportedContent Condition="'$(SupportedContent)' == ''">VANILLA_ID</SupportedContent>
+            <LastWorkingBuild Condition="'$(LastWorkingBuild)' == ''">466292</LastWorkingBuild>
             <APIVersion Condition="'$(APIVersion)' == ''">0</APIVersion>
         </PropertyGroup>
 

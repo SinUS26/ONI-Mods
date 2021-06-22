@@ -65,7 +65,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BottleEmptierVar.cs" />
+    <Compile Include="BottleUserEmptier.cs" />
+    <Compile Include="ModLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
