@@ -1,0 +1,5 @@
+Adding to a bottle emprier variable size
+The duplicates will stop filling when the specified size is reached
+
+Добавление к бутылочному опустошителю размера
+Дупли будут прекращать наполнение при достижении указанного размера

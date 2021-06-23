@@ -3,26 +3,28 @@
 <Project DefaultTargets="Build" TreatAsLocalProperty="OutDir"
          xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-    <Target Name="ClearGameFolderCopyLocal" AfterTargets="ResolveAssemblyReferences">
+<!--    <Target Name="ClearGameFolderCopyLocal" AfterTargets="ResolveAssemblyReferences">
         <ItemGroup>
             <ReferenceCopyLocalPaths Remove="$(GameFolder)\*"/>
         </ItemGroup>
-    </Target>
+    </Target> -->
 
     <Target Name="ILRepack" AfterTargets="Build">
         <ItemGroup>
-	    <InputAssemblies Include="$(TargetDir)\$(ProjectName).dll"/>
+<!--	    <InputAssemblies Include="$(TargetDir)\$(ProjectName).dll"/> -->
 <!--	    <InputAssemblies Include="$(TargetDir)\*.dll"
-                             Exclude="**\0Harmony.dll"/> -->
+                             Exclude="**\0Harmony.dll"/>  -->
         </ItemGroup>
 
         <ILRepack
                 TargetPlatformVersion="v4"
                 TargetKind="SameAsPrimaryAssembly"
-		LibraryPath="$(LibFolder)"
                 Wildcards="true"
+		LibraryPath="$(LibFolder)" 
                 InputAssemblies="@(InputAssemblies)"
                 OutputFile="$(OutputPath)\$(AssemblyName).dll"
+		LogFile="$(OutputPath)\ilrepack_log.txt"
+		Verbose="9"
         />
 
     </Target>
@@ -68,6 +70,7 @@
             -->
             <YamlFiles Include="$(ProjectDir)\*.yaml"/>
             <PoFiles Include="$(ProjectDir)\**\*.po"/>
+	    <PreviewPNG Include="$(ProjectDir)\preview.png"/>
         </ItemGroup>
 
         <!--
@@ -75,6 +78,7 @@
         -->
         <Copy SourceFiles="@(YamlFiles)" DestinationFiles="@(YamlFiles->'$(TempPublishFolder)\%(Filename)%(Extension)')"/>
         <Copy SourceFiles="@(PoFiles)" DestinationFiles="@(PoFiles->'$(TempPublishFolder)\strings\%(Filename)%(Extension)')"/>
+        <Copy SourceFiles="@(PreviewPNG)" DestinationFiles="@(PreviewPNG->'$(TempPublishFolder)\%(Filename)%(Extension)')"/>
 
         <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(TempPublishFolder)\$(TargetFileName)"/>
 

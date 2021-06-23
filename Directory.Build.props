@@ -28,8 +28,8 @@
     <BuildType Condition="'$(Configuration)' == 'VanillaDebug' Or '$(Configuration)' == 'SpacedOutDebug'">Debug</BuildType>
     <LibFolder>..\lib\$(GameContentType)</LibFolder>
     <OutputPath>bin\$(Configuration)\</OutputPath>
-    <DistributionFolder Condition="'$(Configuration)' == 'VanillaRelease' Or '$(Configuration)' == 'VanillaDebug'">\archived_versions\vanilla</DistributionFolder>
-    <DistributionFolder Condition="'$(Configuration)' == 'SpacedOutRelease' Or '$(Configuration)' == 'SpacedOutDebug'"></DistributionFolder>
+<!--    <DistributionFolder Condition="'$(Configuration)' == 'VanillaRelease' Or '$(Configuration)' == 'VanillaDebug'">\archived_versions\vanilla</DistributionFolder>
+    <DistributionFolder Condition="'$(Configuration)' == 'SpacedOutRelease' Or '$(Configuration)' == 'SpacedOutDebug'"></DistributionFolder> -->
   </PropertyGroup>
 
     <ItemGroup>
@@ -66,7 +66,7 @@
       </Reference>
         <Reference Include="UnityEngine.UI">
         <HintPath>$(LibFolder)\UnityEngine.UI.dll</HintPath>
-      </Reference>
+      </Reference> 
 <!--        <Reference Include="Newtonsoft.Json">
         <HintPath>$(LibFolder)\Newtonsoft.Json.dll</HintPath>
       </Reference> 
