@@ -12,16 +12,10 @@
     <Target Name="ILRepack" AfterTargets="Build">
         <ItemGroup>
 	    <InputAssemblies Include="$(TargetDir)\$(ProjectName).dll"/>
-<!--	    <InputAssemblies Include="..\packages\YamlDotNet.11.2.0\lib\net45\YamlDotNet.dll"/> -->
 <!--	    <InputAssemblies Include="$(TargetDir)\*.dll"
-                             Exclude="**\0Harmony.dll"/> -->
-<!--            <InputAssemblies Include="$(LibFolder)\*.dll"
                              Exclude="**\0Harmony.dll"/> -->
         </ItemGroup>
 
-<!--                LibraryPath="$(GameFolder)"  -->
-<!--	<Exec Command="echo LibFolder = $(LibFolder)" />
-	<Exec Command="echo InputAssembles = @(InputAssemblies)" /> -->
         <ILRepack
                 TargetPlatformVersion="v4"
                 TargetKind="SameAsPrimaryAssembly"
@@ -34,18 +28,12 @@
     </Target>
 
     <Target Name="CopyArtifactsToInstallFolder" AfterTargets="ILRepack" Condition=" '$(AssemblyName)' != 'Commons' ">
-<!--        <PropertyGroup Condition="'$(Configuration)' == 'VanillaRelease' Or '$(Configuration)' == 'SpacedOutRelease'">
-            <InstallFolder>..\Release\$(ProjectName)</InstallFolder>
-        </PropertyGroup>
-        <PropertyGroup Condition="'$(Configuration)' == 'VanillaDebug' Or '$(Configuration)' == 'SpacedOutDebug'">
-            <InstallFolder>$(ModFolder)\$(ProjectName)</InstallFolder> 
-        </PropertyGroup>                                               -->
         <PropertyGroup Condition="'$(Configuration)' == 'VanillaRelease'">
 <!--            <InstallFolder>..\Release\$(ProjectName)\archived_versions\vanilla</InstallFolder> -->
             <InstallFolder>..\Release\$(ProjectName)</InstallFolder>
 	    <UseArchivedVersions>true</UseArchivedVersions>
             <SupportedContent>VANILLA_ID</SupportedContent>
-            <LastWorkingBuild>466650</LastWorkingBuild>
+            <LastWorkingBuild>466292</LastWorkingBuild>
             <APIVersion>0</APIVersion> 
         </PropertyGroup>
         <PropertyGroup Condition="'$(Configuration)' == 'SpacedOutRelease'">
@@ -59,7 +47,7 @@
             <InstallFolder>$(UserProfile)\Documents\Klei\OxygenNotIncluded\mods\dev\$(ProjectName)</InstallFolder> 
 	    <UseArchivedVersions>true</UseArchivedVersions>
             <SupportedContent>VANILLA_ID</SupportedContent>
-            <LastWorkingBuild>466650</LastWorkingBuild>
+            <LastWorkingBuild>466292</LastWorkingBuild>
         </PropertyGroup>                                               
         <PropertyGroup Condition="'$(Configuration)' == 'SpacedOutDebug'">
             <InstallFolder>$(UserProfile)\Documents\Klei\OxygenNotIncluded\mods\dev\$(ProjectName)</InstallFolder> 
@@ -70,11 +58,6 @@
 
         <PropertyGroup>
             <TempPublishFolder>$(ProjectDir)\publish</TempPublishFolder>
-<!--            <UseArchivedVersions Condition="'$(UseArchivedVersions)' == ''">false</UseArchivedVersions>
-            <UseArchivedVersions Condition="'$(UseArchivedVersions)' != 'true'">false</UseArchivedVersions>
-            <SupportedContent Condition="'$(SupportedContent)' == ''">vanilla_id</SupportedContent>
-            <LastWorkingBuild Condition="'$(LastWorkingBuild)' == ''">466654</LastWorkingBuild>
-            <APIVersion Condition="'$(APIVersion)' == ''">0</APIVersion> -->
         </PropertyGroup>
 
         <ItemGroup>
@@ -95,10 +78,6 @@
 
         <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(TempPublishFolder)\$(TargetFileName)"/>
 
-
-<!--	<Exec Command="echo InputFilePath=$(TempPublishFolder) OutputFilePath=$(InstallFolder) UseArchivedVersions=$(UseArchivedVersions) SupportedContent=$(SupportedContent) LastWorkingBuild=$(LastWorkingBuild) APIVersion=$(APIVersion)" /> -->
-
-
         <ModInfo InputFilePath="$(TempPublishFolder)"
                  OutputFilePath="$(InstallFolder)"
                  UseArchivedVersions="$(UseArchivedVersions)"
@@ -106,7 +85,6 @@
                  LastWorkingBuild="$(LastWorkingBuild)"
                  APIVersion="$(APIVersion)"
         />
-<!--	<Exec Command="echo Ok" /> -->
         <RemoveDir Directories="$(TempPublishFolder)"/>  
 
         <ItemGroup>

@@ -1,7 +1,8 @@
-msgid ""
+﻿msgid ""
 msgstr ""
 "Application: Oxygen Not Included"
 "POT Version: 2.0"
+"Language: ru"
 
 #. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_DESC
 msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_DESC"
@@ -16,5 +17,5 @@ msgstr ""
 #. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_NAME
 msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_NAME"
 msgid "Bottle Emptier Variable Size"
-msgstr ""
+msgstr "Опустошитель бутылок изменяемого объема"
 

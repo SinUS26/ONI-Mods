@@ -8,10 +8,10 @@ namespace BottleEmptierVar
 {
     public class BottleEmptierVar : IBuildingConfig
     {
-        public static LocString Id = "BottleEmptierVar";
-        public static LocString DisplayName = "Bottle Emptier Variable Size";
-        public static LocString Description = STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIER.DESC;
-        public static LocString Effect = STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIER.EFFECT;
+        public const string Id = "BottleEmptierVar";
+        public static string DisplayName = Languages.BOTTLEEMPTIERVAR_NAME;
+        public static string Description = STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIER.DESC;
+        public static string Effect = STRINGS.BUILDINGS.PREFABS.BOTTLEEMPTIER.EFFECT;
 
         /*		private static readonly List<Storage.StoredItemModifier> PollutedWaterStorageModifiers = new List<Storage.StoredItemModifier>
 				{
@@ -54,7 +54,7 @@ namespace BottleEmptierVar
             storage.capacityKg = 20.0f;
             //			storage.storageFullMargin = 200f;
 
-            TreeFilterable filter = go.AddOrGet<TreeFilterable>();
+            go.AddOrGet<TreeFilterable>();
             go.AddOrGet<BottleUserEmptier>();
 
         }
