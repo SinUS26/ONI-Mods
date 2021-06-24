@@ -29,6 +29,8 @@
 
     </Target>
 
+    <UsingTask TaskName="ModInfo" AssemblyFile="packages\ONI-ModInfo\ONI-ModInfo-Task.dll" />
+
     <Target Name="CopyArtifactsToInstallFolder" AfterTargets="ILRepack" Condition=" '$(AssemblyName)' != 'Commons' ">
         <PropertyGroup Condition="'$(Configuration)' == 'VanillaRelease'">
 <!--            <InstallFolder>..\Release\$(ProjectName)\archived_versions\vanilla</InstallFolder> -->
@@ -42,7 +44,8 @@
             <InstallFolder>..\Release\$(ProjectName)</InstallFolder>
 	    <UseArchivedVersions>false</UseArchivedVersions>
             <SupportedContent>EXPANSION1_ID</SupportedContent>
-            <LastWorkingBuild>466654</LastWorkingBuild>
+            <LastWorkingBuild>467401</LastWorkingBuild>
+	    <APIVersion>2</APIVersion>
         </PropertyGroup>
         <PropertyGroup Condition="'$(Configuration)' == 'VanillaDebug'">
 <!--            <InstallFolder>$(ModFolder)\$(ProjectName)\archived_versions\vanilla</InstallFolder>  -->
@@ -55,7 +58,8 @@
             <InstallFolder>$(UserProfile)\Documents\Klei\OxygenNotIncluded\mods\dev\$(ProjectName)</InstallFolder> 
 	    <UseArchivedVersions>false</UseArchivedVersions>
             <SupportedContent>EXPANSION1_ID</SupportedContent>
-            <LastWorkingBuild>466654</LastWorkingBuild>
+            <LastWorkingBuild>467401</LastWorkingBuild>
+	    <APIVersion>2</APIVersion>
         </PropertyGroup>                                               
 
         <PropertyGroup>

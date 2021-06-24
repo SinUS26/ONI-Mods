@@ -1,5 +1,10 @@
-//using HarmonyLib;
+#if(VANILLA)
 using Harmony;
+#endif
+#if(SPACEDOUT)
+using HarmonyLib;
+#endif
+
 using TUNING;
 using STRINGS;
 using System.Collections.Generic;
@@ -8,11 +13,21 @@ namespace BottleEmptierVar
 {
     public class BottleEmptierVarPatches
     {
+#if (VANILLA)
         public static class Mod_OnLoad
         {
-            public static void OnLoad()
+             public static void OnLoad()
+             {
+#endif
+#if(SPACEDOUT)
+        public class Mod_OnLoad : KMod.UserMod2
+        {
+//            public static void OnLoad()
+            public override void OnLoad(Harmony harmony)
             {
-//                ModUtil.RegisterForTranslation(typeof(Languages));
+                                harmony.PatchAll();
+#endif
+                //                ModUtil.RegisterForTranslation(typeof(Languages));
                 Localization.RegisterForTranslation(typeof(Languages));
             }
         }
