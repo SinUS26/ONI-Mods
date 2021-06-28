@@ -1,0 +1,20 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included"
+"POT Version: 2.0"
+
+#. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_DESC
+msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_DESC"
+msgid ""
+msgstr ""
+
+#. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_EFFECT
+msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_EFFECT"
+msgid ""
+msgstr ""
+
+#. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_NAME
+msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_NAME"
+msgid "Bottle Emptier Variable Size"
+msgstr ""
+

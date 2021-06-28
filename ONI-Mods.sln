@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BottleEmptierVar", "BottleEmptierVar\BottleEmptierVar.csproj", "{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyTelepadPackages", "ModifyTelepadPackages\ModifyTelepadPackages.csproj", "{80036B94-54B7-4671-9815-D7061E3B5202}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		SpacedOutDebug|Any CPU = SpacedOutDebug|Any CPU
@@ -21,6 +23,14 @@ Global
 		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.VanillaDebug|Any CPU.Build.0 = VanillaDebug|Any CPU
 		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.VanillaRelease|Any CPU.ActiveCfg = VanillaRelease|Any CPU
 		{1AA06C56-FA8E-4A18-88E2-82AEFACF4821}.VanillaRelease|Any CPU.Build.0 = VanillaRelease|Any CPU
+		{80036B94-54B7-4671-9815-D7061E3B5202}.SpacedOutDebug|Any CPU.ActiveCfg = SpacedOutDebug|Any CPU
+		{80036B94-54B7-4671-9815-D7061E3B5202}.SpacedOutDebug|Any CPU.Build.0 = SpacedOutDebug|Any CPU
+		{80036B94-54B7-4671-9815-D7061E3B5202}.SpacedOutRelease|Any CPU.ActiveCfg = SpacedOutRelease|Any CPU
+		{80036B94-54B7-4671-9815-D7061E3B5202}.SpacedOutRelease|Any CPU.Build.0 = SpacedOutRelease|Any CPU
+		{80036B94-54B7-4671-9815-D7061E3B5202}.VanillaDebug|Any CPU.ActiveCfg = VanillaDebug|Any CPU
+		{80036B94-54B7-4671-9815-D7061E3B5202}.VanillaDebug|Any CPU.Build.0 = VanillaDebug|Any CPU
+		{80036B94-54B7-4671-9815-D7061E3B5202}.VanillaRelease|Any CPU.ActiveCfg = VanillaRelease|Any CPU
+		{80036B94-54B7-4671-9815-D7061E3B5202}.VanillaRelease|Any CPU.Build.0 = VanillaRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
