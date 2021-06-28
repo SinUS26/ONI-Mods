@@ -3,6 +3,6 @@ namespace ModifyTelepadPackages
 {
     public static class Languages
     {
-        public static LocString NAME = "Name";
+        public static LocString TITLE = "Duplicant configuration";
     }
 }

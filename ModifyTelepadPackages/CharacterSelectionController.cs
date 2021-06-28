@@ -13,6 +13,7 @@ namespace ModifyTelepadPackages
 //            Debug.Log("CharacterSelectionController.InitializeContainers: Prefix()");
         }
         private static void Postfix(ref CharacterSelectionController __instance,
+            //            Debug.Log("CharacterSelectionController.InitializeContainers: Postfix()");
             CarePackageContainer ___carePackageContainerPrefab,
             GameObject ___containerParent,
             ref List<ITelepadDeliverableContainer> ___containers,
