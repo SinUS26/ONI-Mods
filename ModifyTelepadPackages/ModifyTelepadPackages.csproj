@@ -105,6 +105,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterSelectionController.cs" />
+    <Compile Include="CharacterContainer_GenerateCharacter.cs" />
+    <Compile Include="CarePackageContainer_GenerateCharacter.cs" />
     <Compile Include="Languages.cs" />
     <Compile Include="ModLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
