@@ -3,18 +3,103 @@ msgstr ""
 "Application: Oxygen Not Included"
 "POT Version: 2.0"
 
-#. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_DESC
-msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_DESC"
+#. ModifyTelepadPackages.Languages._DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages._DESCRIPTION"
 msgid ""
 msgstr ""
 
-#. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_EFFECT
-msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_EFFECT"
+#. ModifyTelepadPackages.Languages._NAME
+msgctxt "ModifyTelepadPackages.Languages._NAME"
 msgid ""
 msgstr ""
 
-#. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_NAME
-msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_NAME"
-msgid "Bottle Emptier Variable Size"
+#. ModifyTelepadPackages.Languages.APPLY_BUTTON_NAME
+msgctxt "ModifyTelepadPackages.Languages.APPLY_BUTTON_NAME"
+msgid "Apply Settings"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.ATTRIBUTES_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.ATTRIBUTES_DESCRIPTION"
+msgid "Select attributes of your choice"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.ATTRIBUTES_NAME
+msgctxt "ModifyTelepadPackages.Languages.ATTRIBUTES_NAME"
+msgid "\n<b>ATTRIBUTES</b>"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.CHANGE_BUTTON_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.CHANGE_BUTTON_DESCRIPTION"
+msgid "Skip to next"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.CHANGE_BUTTON_NAME
+msgctxt "ModifyTelepadPackages.Languages.CHANGE_BUTTON_NAME"
+msgid "CHANGE"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.JOY_TRAIT_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.JOY_TRAIT_DESCRIPTION"
+msgid "Select overjoy reaction of your choice"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.JOY_TRAIT_NAME
+msgctxt "ModifyTelepadPackages.Languages.JOY_TRAIT_NAME"
+msgid "\n<b>OVERJOY REACTION</b>"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.NEGATIVE_TRAIT_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.NEGATIVE_TRAIT_DESCRIPTION"
+msgid "Select negative trait of your choice"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.NEGATIVE_TRAIT_NAME
+msgctxt "ModifyTelepadPackages.Languages.NEGATIVE_TRAIT_NAME"
+msgid "\n<b>NEGATIVE TRAIT</b>"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.NEGATIVE_TRAITS_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.NEGATIVE_TRAITS_DESCRIPTION"
+msgid "Select negative traits of your choice"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.NEGATIVE_TRAITS_NAME
+msgctxt "ModifyTelepadPackages.Languages.NEGATIVE_TRAITS_NAME"
+msgid "\n<b>NEGATIVE TRAITS</b>"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.POSITIVE_TRAIT_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.POSITIVE_TRAIT_DESCRIPTION"
+msgid "Select positive trait of your choice"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.POSITIVE_TRAIT_NAME
+msgctxt "ModifyTelepadPackages.Languages.POSITIVE_TRAIT_NAME"
+msgid "\n<b>POSITIVE TRAIT</b>"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.POSITIVE_TRAITS_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.POSITIVE_TRAITS_DESCRIPTION"
+msgid "Select positive traits of your choice"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.POSITIVE_TRAITS_NAME
+msgctxt "ModifyTelepadPackages.Languages.POSITIVE_TRAITS_NAME"
+msgid "\n<b>POSITIVE TRAITS</b>"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.STRESS_REACTION_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.STRESS_REACTION_DESCRIPTION"
+msgid "Select stress reaction of your choice"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.STRESS_REACTION_NAME
+msgctxt "ModifyTelepadPackages.Languages.STRESS_REACTION_NAME"
+msgid "\n<b>STRESS REACTION</b>"
+msgstr ""
+
+#. ModifyTelepadPackages.Languages.TITLE
+msgctxt "ModifyTelepadPackages.Languages.TITLE"
+msgid "Duplicant configuration"
 msgstr ""
 

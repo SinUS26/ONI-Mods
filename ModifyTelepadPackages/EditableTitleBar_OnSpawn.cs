@@ -53,8 +53,7 @@ namespace ModifyTelepadPackages
             try
             {
                 CharacterContainer dup = (CharacterContainer)((Component)((KMonoBehaviour)__instance).transform.parent).GetComponent<CharacterContainer>();
-//                component2.onClick += (System.Action)(() => PrintingEventsHook.OnClick(dup, gameObject));
-// FIXING
+                component2.onClick += (System.Action)(() => PrintingEventsHook.OnClick(dup, gameObject));
             }
             catch (Exception ex)
             {

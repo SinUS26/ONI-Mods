@@ -114,6 +114,7 @@
     <Compile Include="GameObject_Extensions.cs" />
     <Compile Include="Languages.cs" />
     <Compile Include="ModLoader.cs" />
+    <Compile Include="PrintingEventsHook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

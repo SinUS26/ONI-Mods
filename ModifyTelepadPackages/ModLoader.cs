@@ -13,7 +13,7 @@ namespace ModifyTelepadPackages
             public override void OnLoad(Harmony harmony)
             {
                 harmony.PatchAll();
-                //                ModUtil.RegisterForTranslation(typeof(Languages));
+//                ModUtil.RegisterForTranslation(typeof(Languages));
                 Localization.RegisterForTranslation(typeof(Languages));
             }
         }

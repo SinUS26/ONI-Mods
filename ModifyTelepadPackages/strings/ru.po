@@ -4,18 +4,108 @@ msgstr ""
 "POT Version: 2.0"
 "Language: ru"
 
-#. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_DESC
-msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_DESC"
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included"
+"POT Version: 2.0"
+
+#. ModifyTelepadPackages.Languages._DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages._DESCRIPTION"
 msgid ""
 msgstr ""
 
-#. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_EFFECT
-msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_EFFECT"
+#. ModifyTelepadPackages.Languages._NAME
+msgctxt "ModifyTelepadPackages.Languages._NAME"
 msgid ""
 msgstr ""
 
-#. BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_NAME
-msgctxt "BottleEmptierVar.Languages.BOTTLEEMPTIERVAR_NAME"
-msgid "Bottle Emptier Variable Size"
-msgstr "Опустошитель бутылок изменяемого объема"
+#. ModifyTelepadPackages.Languages.APPLY_BUTTON_NAME
+msgctxt "ModifyTelepadPackages.Languages.APPLY_BUTTON_NAME"
+msgid "Apply Settings"
+msgstr "Применить настройки"
+
+#. ModifyTelepadPackages.Languages.ATTRIBUTES_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.ATTRIBUTES_DESCRIPTION"
+msgid "Select attributes of your choice"
+msgstr "Выберите, какими характеристиками должен обладать Дупликант"
+
+#. ModifyTelepadPackages.Languages.ATTRIBUTES_NAME
+msgctxt "ModifyTelepadPackages.Languages.ATTRIBUTES_NAME"
+msgid "\n<b>ATTRIBUTES</b>"
+msgstr "\n<b>ХАРАКТЕРИСТИКИ</b>"
+
+#. ModifyTelepadPackages.Languages.CHANGE_BUTTON_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.CHANGE_BUTTON_DESCRIPTION"
+msgid "Skip to next"
+msgstr "Выбрать следующий"
+
+#. ModifyTelepadPackages.Languages.CHANGE_BUTTON_NAME
+msgctxt "ModifyTelepadPackages.Languages.CHANGE_BUTTON_NAME"
+msgid "CHANGE"
+msgstr "ИЗМЕНИТЬ"
+
+#. ModifyTelepadPackages.Languages.JOY_TRAIT_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.JOY_TRAIT_DESCRIPTION"
+msgid "Select overjoy reaction of your choice"
+msgstr "Выберите реакцию на счастье для Дупликанта"
+
+#. ModifyTelepadPackages.Languages.JOY_TRAIT_NAME
+msgctxt "ModifyTelepadPackages.Languages.JOY_TRAIT_NAME"
+msgid "\n<b>OVERJOY REACTION</b>"
+msgstr "\n<b>РЕАКЦИЯ НА СЧАСТЬЕ</b>"
+
+#. ModifyTelepadPackages.Languages.NEGATIVE_TRAIT_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.NEGATIVE_TRAIT_DESCRIPTION"
+msgid "Select negative trait of your choice"
+msgstr "Выберите негативную черту для Дупликанта"
+
+#. ModifyTelepadPackages.Languages.NEGATIVE_TRAIT_NAME
+msgctxt "ModifyTelepadPackages.Languages.NEGATIVE_TRAIT_NAME"
+msgid "\n<b>NEGATIVE TRAIT</b>"
+msgstr "\n<b>НЕГАТИВНАЯ ЧЕРТА</b>"
+
+#. ModifyTelepadPackages.Languages.NEGATIVE_TRAITS_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.NEGATIVE_TRAITS_DESCRIPTION"
+msgid "Select negative traits of your choice"
+msgstr "Выберите негативные черты для Дупликанта"
+
+#. ModifyTelepadPackages.Languages.NEGATIVE_TRAITS_NAME
+msgctxt "ModifyTelepadPackages.Languages.NEGATIVE_TRAITS_NAME"
+msgid "\n<b>NEGATIVE TRAITS</b>"
+msgstr "\n<b>НЕГАТИВНЫЕ ЧЕРТЫ</b>"
+
+#. ModifyTelepadPackages.Languages.POSITIVE_TRAIT_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.POSITIVE_TRAIT_DESCRIPTION"
+msgid "Select positive trait of your choice"
+msgstr "Выберите позитивную черту для Дупликанта"
+
+#. ModifyTelepadPackages.Languages.POSITIVE_TRAIT_NAME
+msgctxt "ModifyTelepadPackages.Languages.POSITIVE_TRAIT_NAME"
+msgid "\n<b>POSITIVE TRAIT</b>"
+msgstr "\n<b>ПОЗИТИВНАЯ ЧЕРТА</b>"
+
+#. ModifyTelepadPackages.Languages.POSITIVE_TRAITS_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.POSITIVE_TRAITS_DESCRIPTION"
+msgid "Select positive traits of your choice"
+msgstr "Выберите позитивные черты для Дупликанта"
+
+#. ModifyTelepadPackages.Languages.POSITIVE_TRAITS_NAME
+msgctxt "ModifyTelepadPackages.Languages.POSITIVE_TRAITS_NAME"
+msgid "\n<b>POSITIVE TRAITS</b>"
+msgstr "\n<b>ПОЗИТИВНЫЕ ЧЕРТЫ</b>"
+
+#. ModifyTelepadPackages.Languages.STRESS_REACTION_DESCRIPTION
+msgctxt "ModifyTelepadPackages.Languages.STRESS_REACTION_DESCRIPTION"
+msgid "Select stress reaction of your choice"
+msgstr "Выберите реакцию на стресс для Дупликанта"
+
+#. ModifyTelepadPackages.Languages.STRESS_REACTION_NAME
+msgctxt "ModifyTelepadPackages.Languages.STRESS_REACTION_NAME"
+msgid "\n<b>STRESS REACTION</b>"
+msgstr "\n<b>РЕАКЦИЯ НА СТРЕСС</b>"
+
+#. ModifyTelepadPackages.Languages.TITLE
+msgctxt "ModifyTelepadPackages.Languages.TITLE"
+msgid "Duplicant configuration"
+msgstr "Настройка черт Дупликанта"
 
